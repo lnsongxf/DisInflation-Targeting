@@ -1,0 +1,718 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+(Dis)Inflation Targeting
+\end_layout
+
+\begin_layout Part
+Models
+\end_layout
+
+\begin_layout Standard
+The preferences of the government are given by 
+\begin_inset Formula 
+\[
+z_{t}=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+and expectations formation are as follows:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\pi_{t}\leq\pi_{t}^{e}$
+\end_inset
+
+ then 
+\begin_inset Formula $\pi_{t+1}^{e}=\max\left\{ \gamma\pi_{t},\pi_{t+1}^{\ast}\right\} $
+\end_inset
+
+, where 
+\begin_inset Formula $\pi_{t+1}^{\ast}$
+\end_inset
+
+ is the announced inflation target at 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ we have the Barro-Gordon case.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\pi_{t}>\pi_{t}^{e}$
+\end_inset
+
+ then 
+\begin_inset Formula $\pi_{t+1}^{e}=\frac{\bar{b}}{a}$
+\end_inset
+
+ the discretionary outcome (
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ is the expected 
+\begin_inset Formula $b_{t+1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Case 1: Disinflation follow the threshold 
+\begin_inset Formula $\pi_{t+1}^{\ast}=\gamma\pi_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+IN this case the discounted value for the government is 
+\begin_inset Formula 
+\[
+V_{0}=\sum_{t=0}^{\infty}\beta^{t}\left[\frac{a}{2}\left(\gamma^{t}\frac{b}{a}\right)^{2}\right]=\sum_{t=0}^{\infty}\beta^{t}\left[\frac{b^{2}}{2a}\gamma^{2t}\right]=\frac{b^{2}}{2a}\frac{1}{1-\beta\gamma^{2}}
+\]
+
+\end_inset
+
+and starting form any arbitrary 
+\begin_inset Formula $t=s$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+V_{s}=\sum_{t=0}^{\infty}\beta^{s}\left[\frac{a}{2}\left(\gamma^{s+t}\frac{b}{a}\right)^{2}\right]=\sum_{t=0}^{\infty}\beta^{s}\left[\frac{b^{2}}{2a}\gamma^{2(s+t)}\right]=\frac{b^{2}}{2a}\gamma^{2(s)}\frac{1}{1-\beta\gamma^{2}}=\gamma^{2(s)}V_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is it whorty to deviate? the value in case the government deviates is 
+\begin_inset Formula 
+\begin{align*}
+V_{d,s} & =\frac{a}{2}\left(\frac{b}{a}\right)^{2}-b_{t}(\frac{b}{a}-\gamma^{s}\frac{b}{a})+\beta V_{0}\\
+ & =\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s})+\beta V_{0}
+\end{align*}
+
+\end_inset
+
+then it is optimal to deviate if 
+\begin_inset Formula 
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s})+\beta V_{0} & \leq\gamma^{2(s)}V_{0}\\
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s}) & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}\\
+\frac{\frac{b^{2}}{a}\left(\gamma^{s}-\frac{1}{2}\right)}{\left(\beta-\gamma^{2(s)}\right)} & \leq V_{0}\\
+\frac{\left(2\gamma^{s}-1\right)}{\left(\beta-\gamma^{2(s)}\right)} & \leq\frac{1}{1-\beta\gamma^{2}}
+\end{align*}
+
+\end_inset
+
+with 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ we recover the Barro-Gordon case where zero inflation is not sustainable
+ as 
+\begin_inset Formula 
+\[
+\frac{\left(-1\right)}{\left(\beta\right)}\leq1
+\]
+
+\end_inset
+
+holds.
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $s=\infty$
+\end_inset
+
+ we have 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}+\beta V_{0} & \leq0\\
+V_{0} & \leq\frac{1}{\beta}\frac{b^{2}}{2a}\\
+\frac{b^{2}}{2a}\frac{1}{1-\beta\gamma^{2}} & \leq\frac{1}{\beta}\frac{b^{2}}{2a}\\
+\gamma^{2} & \leq\frac{1}{\beta}-1
+\end{align*}
+
+\end_inset
+
+this sets a lower bound on 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ So to have no incentives to deviate at the limit it has to be that 
+\begin_inset Formula 
+\begin{align*}
+\gamma^{2} & \geq\frac{1}{\beta}-1\\
+\gamma & \geq\left(\frac{1}{\beta}-1\right)^{1/2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Going back to the previous condition
+\begin_inset Formula 
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s}) & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}\\
+-\frac{1}{2}\frac{b^{2}}{a} & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}-\frac{b^{2}}{a}\gamma^{s}\\
+-\frac{1}{2} & \leq\left(\gamma^{2(s)}-\beta\right)\frac{1}{2}\frac{1}{1-\beta\gamma^{2}}-\gamma^{s}
+\end{align*}
+
+\end_inset
+
+is there a 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ for which this condition is not satisfied for any 
+\begin_inset Formula $s$
+\end_inset
+
+? In this case we would be able to implement the efficient allocation.
+ 
+\end_layout
+
+\begin_layout Standard
+Yes! There are values of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ for which the condition above is never satisifed for any 
+\begin_inset Formula $s$
+\end_inset
+
+ and consequently 
+\begin_inset Formula $\pi=0$
+\end_inset
+
+ can be implemented in the long run.
+ See the numerical solutions in the matlab file test.m
+\end_layout
+
+\begin_layout Standard
+The minimum level of inflation achievable with 
+\begin_inset Formula $\gamma=0$
+\end_inset
+
+ is given by 
+\begin_inset Formula 
+\[
+\pi^{BG}=\frac{1-\beta}{1+\beta}\frac{b}{a}
+\]
+
+\end_inset
+
+and the value is then given by 
+\begin_inset Formula 
+\[
+V^{BG}=\frac{1}{2}\frac{b^{2}}{a}\frac{1-\beta}{\left(1+\beta\right)^{2}}
+\]
+
+\end_inset
+
+so the Barro Gordon porvides higher welfare ex-ante than our case with 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+.
+ Down the road for 
+\begin_inset Formula $s>1$
+\end_inset
+
+ then the welfare in our case is greater and at the limit 
+\begin_inset Formula $s\rightarrow\infty$
+\end_inset
+
+ the loss in our case is zero.
+\end_layout
+
+\begin_layout Standard
+So the plan is not dinamically consistent without the constraint of 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+New setup
+\end_layout
+
+\begin_layout Standard
+Expectations 
+\begin_inset Formula 
+\[
+\pi_{t+1}^{e}=\gamma_{t}\pi_{t}+(1-\gamma_{t})\pi_{t+1}^{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+IS
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{t}=b(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+updating exp
+\begin_inset Formula 
+\[
+\gamma_{t+1}=(1-\theta)\gamma_{t}+\theta(\pi_{t+1}-\pi_{t+1}^{a})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Organizational equilibrium for inflation
+\end_layout
+
+\begin_layout Subsection
+Adaptative expectations
+\end_layout
+
+\begin_layout Standard
+The preferences of the government are given by 
+\begin_inset Formula 
+\[
+z_{t}=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and expectations are adaptative 
+\begin_inset Formula 
+\[
+\pi_{t+1}^{e}=\pi_{t}
+\]
+
+\end_inset
+
+in this case the markov equilibrium has the property that the expectations
+ are rational.
+ Any stationary equilibrium would have that the adaptative expectations
+ are rational.
+\end_layout
+
+\begin_layout Standard
+In this case we have that 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ becomes a state of the economy.
+ The action of the central bank can be defined as the inflation surprise
+ 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+s_{t}=\pi_{t}-\pi_{t}^{e}
+\]
+
+\end_inset
+
+ and the payoff function is 
+\begin_inset Formula 
+\[
+z_{t}(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(s_{t}+\pi_{t}^{e}\right)^{2}-b_{t}(s_{t})
+\]
+
+\end_inset
+
+that can be written as 
+\begin_inset Formula 
+\[
+z_{t}(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(s_{t}\right)^{2}+a\left(s_{t}\pi_{t}^{e}\right)+\frac{a}{2}\left(\pi_{t}^{e}\right)^{2}-b_{t}(s_{t})
+\]
+
+\end_inset
+
+for now we ignore the second term 
+\begin_inset Formula $a\left(s_{t}\pi_{t}^{e}\right)\approx0$
+\end_inset
+
+ to satisfy the separability requirement.
+ Alternatively a linear approximation of that term could be used where the
+ constants are adjusted ex-post once the solution is found (iterating here
+ would give us an approximation of the solution).
+\end_layout
+
+\begin_layout Standard
+So the instantanous payoff is given by 
+\begin_inset Formula 
+\[
+z_{t}(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(s_{t}\right)^{2}+\frac{a}{2}\left(\pi_{t}^{e}\right)^{2}-b_{t}(s_{t})
+\]
+
+\end_inset
+
+and consequently the lifetime payoff at 
+\begin_inset Formula $t$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+v\left(\pi_{t}^{e},\left\{ s_{t}\right\} _{t=0}^{\infty}\right) & =\sum_{j=0}^{\infty}\beta^{j}z_{t}(\pi_{t+j}^{e},s_{t+j})\\
+ & =\sum_{j=0}^{\infty}\beta^{j}\left(\frac{a}{2}\left(s_{t+j}\right)^{2}+\frac{a}{2}\left(\pi_{t+j}^{e}\right)^{2}-b_{t}(s_{t+j})\right)\\
+ & =\sum_{j=0}^{\infty}\beta^{j}\left(\frac{a}{2}\left(s_{t+j}\right)^{2}+\frac{a}{2}\left(\pi_{t+j-1}\right)^{2}-b_{t}(s_{t+j})\right)\\
+ & =\sum_{j=0}^{\infty}\beta^{j}\left(\frac{a}{2}\left(s_{t+j}\right)^{2}+\frac{a}{2}\left(\pi_{t}^{e}+\sum_{i=0}^{j}s_{t+i}\right)^{2}-b_{t}(s_{t+j})\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In this case we have that 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ becomes a state of the economy.
+ The action of the central bank can be defined as the inflation surprise
+ 
+\begin_inset Formula $s_{t}$
+\end_inset
+
+ given by 
+\begin_inset Formula 
+\[
+s_{t}=\pi_{t}/\pi_{t}^{e}
+\]
+
+\end_inset
+
+ and the payoff function is 
+\begin_inset Formula 
+\[
+z_{t}(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(s_{t}\pi_{t}^{e}\right)^{2}-\frac{1}{\pi_{t}^{e}}b_{t}(s_{t}-1)
+\]
+
+\end_inset
+
+that can be written as 
+\begin_inset Formula 
+\[
+z_{t}(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(s_{t}\right)^{2}\left(\pi_{t}^{e}\right)^{2}-\frac{1}{\pi_{t}^{e}}b_{t}(s_{t}-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expectations set by the target
+\end_layout
+
+\begin_layout Standard
+The preferences of the government are given by 
+\begin_inset Formula 
+\[
+z_{t}=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and expectations are set to the target 
+\begin_inset Formula 
+\begin{align*}
+\pi_{t+1}^{e} & =\begin{cases}
+\pi_{t}^{\ast} & \text{if }\pi_{t}=\pi_{t-1}^{\ast}\\
+\pi_{t} & \text{else}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $\pi_{t}^{\ast}$
+\end_inset
+
+ is the target announced at 
+\begin_inset Formula $t$
+\end_inset
+
+ for inflation at 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ In this case we have that 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ becomes a state of the economy.
+ The other action of the central bank is inflation 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+, so the action vector is 
+\begin_inset Formula $s_{t}=\{\pi_{t},\pi_{t}^{\ast}\}$
+\end_inset
+
+ where the current state is 
+\begin_inset Formula $\pi_{0}^{e}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The payoff function is 
+\begin_inset Formula 
+\[
+z(\pi_{t}^{e},s_{t})=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+and consequently the lifetime payoff at 
+\begin_inset Formula $t$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+v\left(\pi_{0}^{e},\left\{ s_{t}\right\} _{t=0}^{\infty}\right) & =\sum_{t=0}^{\infty}\beta^{t}z(\pi_{t}^{e},s_{t})\\
+ & =\sum_{t=0}^{\infty}\beta^{t}\left(\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t-1}^{\ast})\right)\\
+ & =\frac{a}{2}\left(\pi_{0}\right)^{2}-b_{t}(\pi_{0}-\pi_{0}^{e})+\sum_{t=1}^{\infty}\beta^{t}\left(\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t-1}^{\ast})\right)\\
+ & =b_{0}\pi_{0}^{e}+\frac{a}{2}\left(\pi_{0}\right)^{2}-b_{t}(\pi_{0})+\beta b_{1}\pi_{0}^{\ast}+\sum_{t=1}^{\infty}\beta^{t}\left(\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t})\right)+\sum_{t=1}^{\infty}\beta^{t}b_{t+1}(\pi_{t}^{\ast})
+\end{align*}
+
+\end_inset
+
+so we have that the separability condition is satisfied as 
+\begin_inset Formula 
+\[
+v\left(\pi_{0}^{e},\left\{ s_{t}\right\} _{t=0}^{\infty}\right)=b_{0}\pi_{0}^{e}+V\left(\left\{ s_{t}\right\} _{t=0}^{\infty}\right)
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+V\left(\left\{ s_{t}\right\} _{t=0}^{\infty}\right)=\frac{a}{2}\left(\pi_{0}\right)^{2}-b_{t}(\pi_{0})+\beta b_{1}\pi_{0}^{\ast}+\sum_{t=1}^{\infty}\beta^{t}\left(\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t})\right)+\sum_{t=1}^{\infty}\beta^{t}b_{t+1}(\pi_{t}^{\ast})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Expectations averaging actual inflation and the target.
+\end_layout
+
+\begin_layout Standard
+The preferences of the government are given by 
+\begin_inset Formula 
+\[
+z_{t}=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and expectations are set be an average of current inflation and the target
+ 
+\begin_inset Formula 
+\begin{align*}
+\pi_{t+1}^{e} & =\gamma\pi_{t}+(1-\gamma)\pi_{t}^{\ast}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $\pi_{t}^{\ast}$
+\end_inset
+
+ is the target announced at 
+\begin_inset Formula $t$
+\end_inset
+
+ for inflation at 
+\begin_inset Formula $t+1$
+\end_inset
+
+.
+ In this case we have that 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ becomes a state of the economy.
+ The other action of the central bank is inflation 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+, so the action vector is 
+\begin_inset Formula $s_{t}=\{\pi_{t},\pi_{t}^{\ast}\}$
+\end_inset
+
+ where the current state is 
+\begin_inset Formula $\pi_{0}^{e}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+This has the problem that the planner can always fool agents by having a
+ very low target to guarantee it can always surprise agents 
+\end_layout
+
+\begin_layout Part
+Other Ideas
+\end_layout
+
+\begin_layout Itemize
+Check the negotiation of minimum wages and sectoral wage negotioations.
+\end_layout
+
+\end_body
+\end_document
