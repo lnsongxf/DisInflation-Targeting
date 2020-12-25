@@ -1,2 +1,2 @@
 # (Dis)Inflation Targeting
-Work in Progress
+Work in Progress.
