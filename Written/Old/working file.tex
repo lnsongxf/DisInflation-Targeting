@@ -1,0 +1,120 @@
+%% LyX 2.3.1-1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\begin{document}
+\title{(Dis)Inflation Targeting}
+
+\maketitle
+The preferences of the government are given by 
+\[
+z_{t}=\frac{a}{2}\left(\pi_{t}\right)^{2}-b_{t}(\pi_{t}-\pi_{t}^{e})
+\]
+and expectations formation are as follows:
+\begin{itemize}
+\item If $\pi_{t}\leq\pi_{t}^{e}$ then $\pi_{t+1}^{e}=\max\left\{ \gamma\pi_{t},\pi_{t+1}^{\ast}\right\} $,
+where $\pi_{t+1}^{\ast}$ is the announced inflation target at $t+1$.
+For $\gamma=0$ we have the Barro-Gordon case.
+\item If $\pi_{t}>\pi_{t}^{e}$ then $\pi_{t+1}^{e}=\frac{\bar{b}}{a}$
+the discretionary outcome ($\bar{b}$ is the expected $b_{t+1})$
+\end{itemize}
+
+\subsection*{Case 1: Disinflation follow the threshold $\pi_{t+1}^{\ast}=\gamma\pi_{t}$}
+
+IN this case the discounted value for the government is 
+\[
+V_{0}=\sum_{t=0}^{\infty}\beta^{t}\left[\frac{a}{2}\left(\gamma^{t}\frac{b}{a}\right)^{2}\right]=\sum_{t=0}^{\infty}\beta^{t}\left[\frac{b^{2}}{2a}\gamma^{2t}\right]=\frac{b^{2}}{2a}\frac{1}{1-\beta\gamma^{2}}
+\]
+and starting form any arbitrary $t=s$ we have 
+\[
+V_{s}=\sum_{t=0}^{\infty}\beta^{s}\left[\frac{a}{2}\left(\gamma^{s+t}\frac{b}{a}\right)^{2}\right]=\sum_{t=0}^{\infty}\beta^{s}\left[\frac{b^{2}}{2a}\gamma^{2(s+t)}\right]=\frac{b^{2}}{2a}\gamma^{2(s)}\frac{1}{1-\beta\gamma^{2}}=\gamma^{2(s)}V_{0}
+\]
+
+Is it whorty to deviate? the value in case the government deviates
+is 
+\begin{align*}
+V_{d,s} & =\frac{a}{2}\left(\frac{b}{a}\right)^{2}-b_{t}(\frac{b}{a}-\gamma^{s}\frac{b}{a})+\beta V_{0}\\
+ & =\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s})+\beta V_{0}
+\end{align*}
+then it is optimal to deviate if 
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s})+\beta V_{0} & \leq\gamma^{2(s)}V_{0}\\
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s}) & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}\\
+\frac{\frac{b^{2}}{a}\left(\gamma^{s}-\frac{1}{2}\right)}{\left(\beta-\gamma^{2(s)}\right)} & \leq V_{0}\\
+\frac{\left(2\gamma^{s}-1\right)}{\left(\beta-\gamma^{2(s)}\right)} & \leq\frac{1}{1-\beta\gamma^{2}}
+\end{align*}
+with $\gamma=0$ we recover the Barro-Gordon case where zero inflation
+is not sustainable as 
+\[
+\frac{\left(-1\right)}{\left(\beta\right)}\leq1
+\]
+holds.
+
+When $s=\infty$ we have 
+
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}+\beta V_{0} & \leq0\\
+V_{0} & \leq\frac{1}{\beta}\frac{b^{2}}{2a}\\
+\frac{b^{2}}{2a}\frac{1}{1-\beta\gamma^{2}} & \leq\frac{1}{\beta}\frac{b^{2}}{2a}\\
+\gamma^{2} & \leq\frac{1}{\beta}-1
+\end{align*}
+this sets a lower bound on $\gamma$. So to have no incentives to
+deviate at the limit it has to be that 
+\begin{align*}
+\gamma^{2} & \geq\frac{1}{\beta}-1\\
+\gamma & \geq\left(\frac{1}{\beta}-1\right)^{1/2}
+\end{align*}
+
+Going back to the previous condition
+\begin{align*}
+\frac{b^{2}}{2a}-\frac{b^{2}}{a}(1-\gamma^{s}) & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}\\
+-\frac{1}{2}\frac{b^{2}}{a} & \leq\left(\gamma^{2(s)}-\beta\right)V_{0}-\frac{b^{2}}{a}\gamma^{s}\\
+-\frac{1}{2} & \leq\left(\gamma^{2(s)}-\beta\right)\frac{1}{2}\frac{1}{1-\beta\gamma^{2}}-\gamma^{s}
+\end{align*}
+is there a $\gamma$ for which this condition is not satisfied for
+any $s$? In this case we would be able to implement the efficient
+allocation. 
+
+Yes! There are values of $\gamma$ for which the condition above is
+never satisifed for any $s$ and consequently $\pi=0$ can be implemented
+in the long run. See the numerical solutions in the matlab file test.m
+
+The minimum level of inflation achievable with $\gamma=0$ is given
+by 
+\[
+\pi^{BG}=\frac{1-\beta}{1+\beta}\frac{b}{a}
+\]
+and the value is then given by 
+\[
+V^{BG}=\frac{1}{2}\frac{b^{2}}{a}\frac{1-\beta}{\left(1+\beta\right)^{2}}
+\]
+so the Barro Gordon porvides higher welfare ex-ante than our case
+with $\gamma>0$. Down the road for $s>1$ then the welfare in our
+case is greater and at the limit $s\rightarrow\infty$ the loss in
+our case is zero.
+
+So the plan is not dinamically consistent without the constraint of
+$\gamma$. 
+
+\section*{New setup}
+
+Expectations 
+\[
+\pi_{t+1}^{e}=\gamma_{t}\pi_{t}+(1-\gamma_{t})\pi_{t+1}^{a}
+\]
+
+IS
+
+\[
+y_{t}=b(\pi_{t}-\pi_{t}^{e})
+\]
+
+updating exp
+\[
+\gamma_{t+1}=(1-\theta)\gamma_{t}+\theta(\pi_{t+1}-\pi_{t+1}^{a})
+\]
+
+\end{document}
